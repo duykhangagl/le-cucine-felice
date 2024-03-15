@@ -1,0 +1,28 @@
+{{ 'section-img-banner-single.css' | asset_url | stylesheet_tag }}
+
+<div class="p-top-banner">
+  <div class="p-top-banner__inner">
+    <img
+      class="p-top-banner__img"
+      src="https://cdn.shopify.com/s/files/1/0835/8694/1204/files/banner_dbaeccc5-f5a5-42bd-a7fc-3bec764152af.jpg?v=1696479636"
+      alt="#"
+    >
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image banner single",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+
+  "presets": [
+    {
+      "name": "img-banner-single"
+    }
+  ]
+}
+{% endschema %}

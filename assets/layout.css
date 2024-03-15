@@ -1,0 +1,30 @@
+html {
+  scroll-behavior: smooth;
+  /* visibility: hidden; */
+}
+
+html.wf-active,
+html.loading-delay {
+  visibility: visible;
+}
+
+body {
+  font-family: var(--main-font);
+  line-height: 1.5;
+}
+
+.l-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.l-container--w1100 {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media only screen and (max-width: 767px) {
+  .l-container--w1100 {
+    padding: 0 17px;
+  }
+}

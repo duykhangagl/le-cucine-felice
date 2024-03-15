@@ -1,0 +1,43 @@
+{{ 'custom-new-products.css' | asset_url | stylesheet_tag }}
+{{ 'custom-component-item.css' | asset_url | stylesheet_tag }}
+
+<section class="p-top-new">
+  <div class="l-container--w1100">
+    <h2 class="p-top-new__title">新商品一覧</h2>
+
+    <div class="p-top-new__list">
+      {% assign newest_product = collection.products %}
+      {%- for product in collections.all.products limit: 8 -%}
+        <a class="p-top-new__item">
+          <div class="c-item1">
+            <div class="c-item1__imgWrap">
+              <img
+                class="c-item1__img"
+                src="{{product.featured_media | image_url}}"
+                alt="{{ product.price | escape }}"
+              >
+            </div>
+            <h4 class="c-item1__brand">{{ product.metafields.brand | escape }}</h4>
+            <h3 class="c-item1__name">{{ product.title | escape }}</h3>
+            <p class="c-item1__price">{{ product.price | escape }}</p>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+
+    <div class="p-top-new__btn">
+      <a href="#" class="c-btn1 c-btn1--fontEn"> View more </a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "newProducts",
+  "tag": "section",
+  "presets": [
+    {
+      "name": "New Products"
+    }
+  ]
+}
+{% endschema %}

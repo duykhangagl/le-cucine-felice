@@ -1,0 +1,39 @@
+{{ 'section-voucher.css' | asset_url | stylesheet_tag }}
+
+<section class="p-product-gift">
+  <div class="l-container--w1100">
+    <div class="p-product-gift__inner">
+      <div class="p-product-gift__content">
+        <h2 class="p-product-gift__title">新しい意識で暮らしを豊か</h2>
+        <p class="p-product-gift__desc">新しい意識で暮らしを豊か</p>
+        <div class="p-product-gift__button">
+          {% render 'button', title: 'View More', href: '/' %}
+        </div>
+      </div>
+
+      <div class="p-product-gift__imgWrap">
+        <img
+          class="p-product-gift__img"
+          src="https://cdn.shopify.com/s/files/1/0835/8694/1204/files/slide1.jpg?v=1696520901"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "product voucher",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+
+  "presets": [
+    {
+      "name": "product-voucher"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,61 @@
+/*------------------------------------------------------------
+btn
+------------------------------------------------------------*/
+
+.c-btn1 {
+  position: relative;
+  background-color: var(--white-900);
+  border: 1px solid var(--gray-500);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  border-radius: 100px;
+  min-width: 180px;
+  min-height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.c-btn1.c-btn1--fontEn {
+  font-family: var(--en-font);
+}
+.c-btn1:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 767px) {
+  .c-btn1 {
+    font-size: 1.2rem;
+    min-height: 45px;
+    min-width: 150px;
+  }
+}
+
+.c-btn1__icon {
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  left: 20%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-btn1__icon--suff {
+  left: auto;
+  top: 49%;
+  right: 0%;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-btn1__icon--suff {
+    left: auto;
+    top: 44%;
+    right: 3%;
+  }
+}
+
+/*
+------------------------------------------------------------*/

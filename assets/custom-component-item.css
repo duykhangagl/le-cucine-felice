@@ -1,0 +1,149 @@
+.c-item1__imgWrap {
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.c-item1__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.c-item1__brand {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 767px) {
+  .c-item1__brand {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+}
+
+.c-item1__name {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-item1__name {
+    font-size: 1.2rem;
+    margin-top: 6px;
+  }
+}
+
+.c-item1__price {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  margin-top: 6px;
+}
+@media only screen and (max-width: 767px) {
+  .c-item1__price {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+}
+
+.c-item2__imgWrap {
+  position: relative;
+  padding-bottom: 74.9%;
+  width: 100%;
+}
+
+.c-item2__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.c-item2__name {
+  margin-top: 9px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2.14;
+}
+
+.c-item3 {
+  position: relative;
+}
+
+.c-item3__ranked {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  z-index: 1;
+  width: 30px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: var(--purple-400);
+}
+
+.c-item3__imgWrap {
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.c-item3__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.c-item3__brand {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 767px) {
+  .c-item3__brand {
+    margin-top: 12px;
+  }
+}
+
+.c-item3__name {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  margin-top: 8px;
+}
+@media only screen and (max-width: 767px) {
+  .c-item3__name {
+    margin-top: 6px;
+  }
+}
+
+.c-item3__price {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  margin-top: 6px;
+}
+@media only screen and (max-width: 767px) {
+  .c-item3__price {
+    margin-top: 8px;
+  }
+}

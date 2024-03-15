@@ -1,0 +1,95 @@
+{{ 'section-recently-viewed.css' | asset_url | stylesheet_tag }}
+
+<div class="c-recent__wrapper">
+  <div class="l-container--w1100">
+    <h2 class="c-recent__header">{{ section.settings.heading }}</h2>
+    <ul class="c-recent__grid js-recent-view">
+      <!-- Recently viewed products will appear here -->
+    </ul>
+  </div>
+</div>
+
+<script>
+  
+  
+  function setRecentlyViewedProducts() {
+    const productData = {
+      productTitle: '{{ product.title }}',
+      productImg: "{{ product.featured_media | img_url: '300x' }}",
+      productVendor : {{ product.vendor}},
+      productPrice: '{{ product.price | money }}',
+      productUrl: '{{ product.url }}',
+      productImageAltText: '{{product.featured_media.alt | escape }}',
+    };
+    const productList = [];
+    let jsonResp, jsonRespArr, jsonRespArrStr;
+    const numberOfProducts = 8;
+    productList.push(productData);
+    const currProductPageTitle = productData.productTitle;
+    const productDataString = JSON.stringify(productList);
+    const localData = localStorage.getItem('recentlyViewedProduct');
+
+    if (localData === null) {
+      localStorage.setItem('recentlyViewedProduct', productDataString);
+    } else if (localData) {
+      const oldProductData = localStorage.getItem('recentlyViewedProduct');
+      const countProductData = (oldProductData.match(/productTitle/g) || []).length;
+      const sameProduct = oldProductData.includes(currProductPageTitle);
+      if (countProductData < numberOfProducts && sameProduct == false) {
+        jsonResp = JSON.parse(oldProductData);
+        jsonRespArr = jsonResp.concat(productList);
+        jsonRespArrStr = JSON.stringify(jsonRespArr);
+        localStorage.setItem('recentlyViewedProduct', jsonRespArrStr);
+      } else if (countProductData >= numberOfProducts && sameProduct == false) {
+        jsonResp = JSON.parse(oldProductData);
+        jsonResp.shift();
+        jsonRespArr = jsonResp.concat(productList);
+        jsonRespArr = JSON.stringify(jsonRespArr);
+        localStorage.setItem('recentlyViewedProduct', jsonRespArr);
+      }
+    }
+  }
+
+  setRecentlyViewedProducts();
+  const localViewed = localStorage.recentlyViewedProduct;
+  function getRecentlyViewedProducts() {
+    const productData = JSON.parse(localStorage.getItem('recentlyViewedProduct'));
+    const recentlyViewedHtml = [];
+    productData.map((item) => {
+      recentlyViewedHtml.unshift(`
+    <li class="c-recent__gridItem"">
+      <a href="${item.productUrl}"> 
+		<img class="c-recent__img" src='${item.productImg}' loading="lazy" alt="${item.productImageAltText}"/>
+      </a>
+       <h3><a class="c-recent__link" href="${item.productUrl}">${item.productTitle}</a></h3>
+       <p>${item.productPrice}</p>
+    </li>
+   `);
+    });
+    const newProductData = `${recentlyViewedHtml.join('')}`;
+    const fullContent = document.getElementsByClassName('js-recent-view');
+    fullContent[0].innerHTML = newProductData;
+  }
+
+  document.addEventListener('DOMContentLoaded', function (event) {
+    getRecentlyViewedProducts();
+  });
+
+
+
+
+</script>
+
+{% schema %}
+{
+  "name": "Recently Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Recently Viewed",
+      "label": "Heading"
+    }
+  ]
+}
+{% endschema %}

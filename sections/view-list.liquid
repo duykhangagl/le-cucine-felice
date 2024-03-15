@@ -1,0 +1,35 @@
+{{ 'section-view-list.css' | asset_url | stylesheet_tag }}
+
+<section class="p-top-list">
+  <div class="l-container--w1100">
+    <div class="p-top-list__inner">
+      <div class="p-top-list__content">
+        <h2 class="p-top-list__title">ショップ一覧</h2>
+        <p class="p-top-list__desc">
+          この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+        </p>
+
+        <div class="p-top-list__btn">
+          {% render 'button', iconSuffix: true, isEn: true, title: 'View More', href: '/' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "view-list",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+
+  "presets": [
+    {
+      "name": "view-list"
+    }
+  ]
+}
+{% endschema %}

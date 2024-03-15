@@ -1,0 +1,40 @@
+{{ 'component-button.css' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  props
+    isEn: boolean,
+    title: string ,
+    iconPrefix: boolean,
+    iconSuffix: boolean,
+{% endcomment %}
+
+{% if href != blank %}
+  <button class="c-btn1 {% if  isEn  %}c-btn1--fontEn{% endif%}">
+    {%- if iconPrefix != blank %}
+      {{ iconPrefix }}
+    {%- endif %}
+    {{ title }}
+    {%- if iconSuffix %}
+      <span class="c-btn1__icon c-btn1__icon--suff">
+        <svg xmlns="http://www.w3.org/2000/svg" width="5.811" height="10.121" viewBox="0 0 5.811 10.121">
+          <path id="Path_63" data-name="Path 63" d="M415.386,1428.337l4,4-4,4" transform="translate(-414.325 -1427.277)" fill="none" stroke="#e4007f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </svg>
+      </span>
+    {%- endif %}
+  </button>
+
+{% else %}
+  <a href="{{ href }}" class="c-btn1">
+    {%- if iconPrefix != blank %}
+      {{ iconPrefix }}
+    {%- endif %}
+    {{ title | escape }}
+    {%- if iconSuffix %}
+      <span class="c-btn1__icon c-btn1__icon--suff">
+        <svg xmlns="http://www.w3.org/2000/svg" width="5.811" height="10.121" viewBox="0 0 5.811 10.121">
+          <path id="Path_63" data-name="Path 63" d="M415.386,1428.337l4,4-4,4" transform="translate(-414.325 -1427.277)" fill="none" stroke="#e4007f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </svg>
+      </span>
+    {%- endif %}
+  </a>
+{% endif %}

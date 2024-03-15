@@ -1,0 +1,23 @@
+.c-input {
+  font-size: 1.4rem;
+  border-radius: 100px;
+  min-height: 47px;
+  min-width: 265px;
+  padding: 14px 23px;
+  border: 1px solid var(--black-900);
+  background-color: transparent;
+}
+.c-input::-moz-placeholder,
+.c-input::placeholder {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  font-family: var(--en-font);
+  color: var(--gray-600);
+}
+
+@media screen and(max-width: 767px ) {
+  .c-input::-moz-placeholder,
+  .c-input::placeholder {
+    font-size: 1.2rem;
+  }
+}

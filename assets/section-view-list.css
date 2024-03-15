@@ -1,0 +1,80 @@
+.p-top-list {
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-top-list {
+    margin-bottom: 120px;
+  }
+}
+
+.p-top-list__inner {
+  margin-top: 114px;
+  min-height: 600px;
+  background: url("https://cdn.shopify.com/s/files/1/0835/8694/1204/files/banner.jpg?v=1696479014");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-top-list__inner {
+    min-height: 450px;
+    margin: 53px -4px 0;
+  }
+}
+
+.p-top-list__content {
+  background-color: var(--white-900);
+  opacity: 0.95;
+  width: 600px;
+  min-height: 290px;
+
+  padding: 44px 75px 11px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .p-top-list__content {
+    padding: 35px 15px 20px 11px;
+    min-height: 250px;
+  }
+}
+
+.p-top-list__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 767px) {
+  .p-top-list__title {
+    font-size: 1.6rem;
+  }
+}
+
+.p-top-list__desc {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  line-height: 2.14;
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-top-list__desc {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-top: 12px;
+  }
+}
+
+.p-top-list__btn {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .p-top-list__btn {
+    margin-top: 17px;
+  }
+}

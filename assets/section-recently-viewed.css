@@ -1,0 +1,28 @@
+.c-recent__wrapper {
+  margin: 1rem auto;
+}
+
+.c-recent__header {
+  text-align: center;
+}
+
+.c-recent__img {
+  aspect-ratio: 1;
+}
+
+.c-recent__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+.c-recent__gridItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.c-recent__link {
+  text-decoration: none;
+  color: #000;
+}

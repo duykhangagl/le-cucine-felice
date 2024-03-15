@@ -1,0 +1,145 @@
+.c-footer {
+  background-color: var(--pink-100);
+  padding: 67px 0 28px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .c-footer {
+    padding-top: 66px;
+  }
+}
+
+.c-footer__logo {
+  text-align: center;
+}
+
+.c-footer__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 71px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .c-footer__list {
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+}
+
+.c-footer__item {
+  flex: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .c-footer__item {
+    margin-top: 53px;
+    width: 50%;
+    flex: unset;
+  }
+
+  .c-footer__item:nth-child(:last-child) {
+    margin-top: 58px;
+  }
+
+  .c-footer__item:nth-child(:last-child) .item__itemList {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .c-footer__item:nth-last-child(-n + 2) {
+    width: 100%;
+  }
+}
+
+.c-footer__itemTitle {
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  font-family: var(--en-font);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .c-footer__itemTitle {
+    font-size: 1.6rem;
+  }
+}
+
+.c-footer__itemList {
+  margin-top: 22px;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-footer__itemList {
+    margin-top: 15px;
+  }
+}
+
+.c-footer__itemItem {
+  margin-top: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-footer__itemItem {
+    margin-top: 7px;
+  }
+}
+
+.c-footer__itemList .c-input {
+  margin-top: 8px;
+}
+
+.c-footer__itemItem::before {
+  content: "";
+  top: 54%;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 1px;
+  width: 8px;
+  background-color: var(--pink-500);
+}
+
+.c-footer__itemLink {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+@media only screen and (max-width: 767px) {
+  .c-footer__itemLink {
+    font-size: 1.2rem;
+  }
+}
+
+.c-footer__external {
+  display: flex;
+  justify-content: center;
+  margin-top: 53px;
+}
+
+@media only screen and(max-width: 767px) {
+  .c-footer__external {
+    margin-top: 58px;
+  }
+}
+
+.c-footer__externalLink {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: var(--white-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.c-footer__copyRight {
+  margin-top: 43px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-family: var(--en-font);
+  text-align: center;
+}
